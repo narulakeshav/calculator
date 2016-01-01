@@ -1,0 +1,147 @@
+@font-face {
+  font-family: 'Bold';
+  src: url('Roboto-Bold.ttf');
+}
+body {
+    /*background: -webkit-linear-gradient(-60deg, #CCC 0%,#CCC 50%,#BBB 50%,#BBB 100%);*/
+    background:  radial-gradient(circle, #FFF, #888);
+    padding-top: 2em;
+    height: 100vh;
+    font-family: Roboto;
+}
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+.btn {
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+.container {
+    width: 94%;
+}
+:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px transparent;
+}
+.calculator {
+    background: #F0F0F0;
+    box-shadow: 2px 3px 6px #C2C2C2;
+    height: 672px;
+}
+.displayBox {
+    background: #03A9F4;
+    height: 220px;
+}
+.form-control {
+    background: transparent;
+    border: none;
+    color: #FFF;
+    font-size: 80px;
+    font-weight: 100;
+    margin-top: 80px;
+    float: right;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    text-align: right;
+    padding-right: 20px;
+    outline: none;
+    box-shadow: 0px 0px 0px transparent;
+}
+.form-control:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px transparent;
+}
+::-webkit-input-placeholder {
+   color: #FFF !important;
+}
+.notification {
+    height: 27px;
+    background: #049ADE;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+.notification:hover {
+    background: #028FCF;
+}
+.notificationMessage {
+    color: #A0DEFA;
+    padding-top: 6px;
+    font-size: 11px;
+    font-family: Bold;
+    text-transform: uppercase;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+.notification:hover .notificationMessage {
+    color: #FFF;
+}
+.operationSide {
+    background: #FFF;
+    margin-top: -14px;
+    padding-left: -20px;
+    padding: 0;
+    padding-top: 10px;
+    border-left: 1px solid #E5E5E5;
+}
+.numberPad {
+    padding-top: 14px;
+}
+.btn-calc,
+.btn-calc:focus {
+    background: transparent;
+    color: #A2A2A2;
+    font-size: 25px;
+    width: 80px;
+    height: 80px;
+    font-weight: 100;
+    border-radius: 100px;
+    outline: none;
+    box-shadow: 0px 0px 0px transparent;
+    border: 2px solid transparent;
+}
+.btn-calc:hover {
+    background: #FFF;
+    color: #03A9F4;
+    border: 1px solid #E0E0E0;
+}
+.btn-operation {
+    background: transparent;
+    color: #999;
+    font-size: 25px;
+    width: 97px;
+    height: 80.8px;
+    font-weight: 100;
+    border-radius: 0;
+    outline: none;
+    box-shadow: 0px 0px 0px transparent;
+}
+.btn-operation:focus {
+    background: #E8E8E8;
+    color: #444;
+    outline: 0;
+}
+.btn-operation:hover {
+    background: #E8E8E8;
+    color: #444;
+}
+.equals {
+    background: #03A9F4;
+    color: #FFF;
+    height: 95px;
+}
+.equals:hover {
+    background: #049ADE;
+}
+.clear {
+    background: #03A9F4;
+    color: #FFF;
+    border: none;
+}
+.clear:hover {
+    background: #049ADE;
+    color: #FFF;
+}
