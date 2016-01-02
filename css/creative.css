@@ -264,7 +264,7 @@ a, .btn {
     }
     .equals,
     .equals:focus {
-        width: 100%;
+        width: 62px;
         height: 63px;
         margin-top: 1px;
     }
