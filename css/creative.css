@@ -260,6 +260,6 @@ a, .btn {
         height: 70px;
     }
     .modal-dialog {
-        width: 90%;
+        width: 100%;
     }
 }
