@@ -116,7 +116,7 @@ $(document).ready(function() {
     function checkLength(num) {
         if(num.toString().length > 7 && num.toString().length < 14) { 
             $("#display").css("font-size", "40px");
-            $("#display").css("margin-top", "150px");
+            $("#display").css("margin-top", "167px");
         }
         else if(num.toString().length > 18) { 
             num = "Infinity";
