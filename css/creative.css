@@ -276,10 +276,10 @@ a, .btn {
     }
     .equals,
     .equals:focus {
-        width: 60px;
-        height: 60px;
-        border-radius: 60px;
-        margin-top: -8px;
+        width: 62px;
+        height: 63px;
+        margin-top: -9px;
+        margin-right: -8px;
     }
     .modal-dialog {
         width: 100%;
