@@ -5,7 +5,7 @@
 body {
     /*background: -webkit-linear-gradient(-60deg, #CCC 0%,#CCC 50%,#BBB 50%,#BBB 100%);*/
     background:  radial-gradient(circle, #FFF, #888);
-    padding-top: 2em;
+    padding-top: 2%;
     height: 100vh;
     font-family: Roboto;
 }
@@ -31,6 +31,7 @@ a, .btn {
 }
 .displayBox {
     background: #03A9F4;
+    padding: 0;
 }
 .displayText {
     margin-top: 110px;
@@ -40,6 +41,7 @@ a, .btn {
     font-size: 80px;
     font-weight: 100;
     padding-right: 20px;
+    padding-bottom: -10px;
     float: right;
     display: inline-block; 
 }
@@ -69,8 +71,8 @@ a, .btn {
 .operationSide {
     background: #FFF;
     margin-top: -14px;
-    padding-left: -20px;
     padding: 0;
+    padding-left: -20px;
     padding-top: 10px;
     border-left: 1px solid #E5E5E5;
 }
@@ -82,8 +84,8 @@ a, .btn {
     background: transparent;
     color: #A2A2A2;
     font-size: 25px;
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     font-weight: 100;
     border-radius: 100px;
     outline: none;
@@ -119,7 +121,6 @@ a, .btn {
 .equals:focus {
     background: #03A9F4;
     color: #FFF;
-    height: 95px;
 }
 .equals:hover {
     background: #049ADE;
@@ -246,12 +247,14 @@ a, .btn {
         height: 70px;
         font-size: 18px;
     }
+    .operationSide {
+        padding: 0;
+    }
     .btn-operation,
     .btn-operation:focus {
         width: 60px;
         height: 60px;
         font-size: 18px;
-        margin-top: -8px;
     }
     .clear,
     .clear:focus {
@@ -261,12 +264,28 @@ a, .btn {
     }
     .equals,
     .equals:focus {
-        width: 62px;
+        width: 100%;
         height: 63px;
-        margin-top: -9px;
-        margin-right: -8px;
+        margin-top: 1px;
     }
     .modal-dialog {
         width: 100%;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    body {
+        padding-top: 10%;
+    }
+    .btn-calc,
+    .clear,
+    .btn-calc:focus,
+    .clear:focus {
+        width: 80px;
+        height: 80px;
+    }
+    .equals,
+    .equals:focus {
+        width: 100%;
+        height: 96px;
     }
 }

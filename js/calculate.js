@@ -25,47 +25,47 @@ $(document).ready(function() {
         $("button").prop("disabled", false);
     });
     $("#one").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(1);
     });
     $("#two").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(2);
     });
     $("#three").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(3);
     });
     $("#four").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(4);
     });
     $("#five").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(5);
     });
     $("#six").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(6);
     });
     $("#seven").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(7);
     });
     $("#eight").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(8);
     });
     $("#nine").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(9);
     });
     $("#zero").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(0);
     });
     $("#decimal").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(".");
     });
 
@@ -79,28 +79,15 @@ $(document).ready(function() {
         displayBox.innerHTML += "-";
     });
     $("#multiply").click(function() {
-        evaluate();
         displayBox.innerHTML += "×";
     });
     $("#divide").click(function() {
-        evaluate();
         displayBox.innerHTML += "÷";
     });
     $("#square").click(function() {
         var num = Number(displayBox.innerHTML);
         num = num * num;
-        num = num.toString();
-        if(num.length > 7 && num.length < 14) { 
-            $("#display").css("font-size", "40px");
-            $("#display").css("margin-top", "130px");
-        }
-        else if(num.length > 18) { 
-            num = "Infinity";
-            $("#display").css("font-size", "80px");
-            $("#display").css("margin-top", "110px");
-            $("button").prop("disabled", true);
-            $(".clear").attr("disabled", false);
-        }
+        checkLength(num);
         displayBox.innerHTML = num;
     });
     $("#sqrt").click(function() {
@@ -112,21 +99,28 @@ $(document).ready(function() {
 
     //EVAL FUNCTION
     function evaluate() {
+        displayBox.innerHTML = displayBox.innerHTML.replace(",", "");
         displayBox.innerHTML = displayBox.innerHTML.replace("×", "*");
         displayBox.innerHTML = displayBox.innerHTML.replace("÷", "/");
         var evaluate = eval(displayBox.innerHTML);
-        if(evaluate.toString().length > 7 && evaluate.toString().length < 14) { 
+        checkLength(evaluate);
+        evaluate = addCommas(evaluate.toString());
+        displayBox.innerHTML = evaluate;
+    }
+
+    //CHECK FOR LENGTH & DISABLING BUTTONS
+    function checkLength(num) {
+        if(num.toString().length > 7 && num.toString().length < 14) { 
             $("#display").css("font-size", "40px");
             $("#display").css("margin-top", "130px");
         }
-        else if(evaluate.toString().length > 18) { 
+        else if(num.toString().length > 18) { 
             num = "Infinity";
             $("#display").css("font-size", "80px");
             $("#display").css("margin-top", "110px");
             $("button").prop("disabled", true);
             $(".clear").attr("disabled", false);
         }
-        displayBox.innerHTML = evaluate;
     }
 
     //TRIM IF NECESSARY
@@ -144,5 +138,4 @@ $(document).ready(function() {
             $(".clear").attr("disabled", false);
         }
     }
-
 });
