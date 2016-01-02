@@ -106,6 +106,9 @@ $(document).ready(function() {
         displayBox.innerHTML = displayBox.innerHTML.replace("÷", "/");
         var evaluate = eval(displayBox.innerHTML);
         checkLength(evaluate);
+        if(evaluate.toString().indexOf(".") !== -1) {
+            evaluate = evaluate.toFixed(5);
+        }
         displayBox.innerHTML = evaluate;
     }
 
