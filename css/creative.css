@@ -241,29 +241,45 @@ a, .btn {
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 768px) {
+    body {
+       padding-top: 1.3em; 
+    }
     .calculator {
-        height: 620px;
+        height: 590px;
+        box-shadow: 2px 3px 6px #888;
     }
     .displayBox {
-        height: 200px;
+        height: 150px;
     }
     .displayText {
         margin-top: 80px;
+        font-size: 50px;
     }
-    .btn-calc {
+    .btn-calc,
+    .btn-calc:focus {
         width: 70px;
         height: 70px;
         font-size: 18px;
     }
-    .btn-operation {
-        width: 97px;
-        height: 72.8px;
+    .btn-operation,
+    .btn-operation:focus {
+        width: 60px;
+        height: 60px;
         font-size: 18px;
+        margin-top: -8px;
     }
-    .clear {
+    .clear,
+    .clear:focus {
         width: 70px;
         height: 70px;
         font-size: 18px;
+    }
+    .equals,
+    .equals:focus {
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        margin-top: -8px;
     }
     .modal-dialog {
         width: 100%;
