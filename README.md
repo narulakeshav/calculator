@@ -3,7 +3,7 @@ CalculatorX is a basic online calculator that should do your basic calculations,
 
 You can view the calculator and play around with it:
 [CalculatorX](https://narulakeshav.github.io/calculator)
-![Screenshot](http://goo.gl/zVbGlF)
+![Screenshot](http://goo.gl/6bc8XH)
 
 ## What I used: 
 * HTML5 (Duh!)
