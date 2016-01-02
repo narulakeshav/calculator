@@ -28,11 +28,9 @@ a, .btn {
 .calculator {
     background: #F0F0F0;
     box-shadow: 2px 3px 6px #C2C2C2;
-    height: 672px;
 }
 .displayBox {
     background: #03A9F4;
-    height: 220px;
 }
 .displayText {
     margin-top: 110px;
@@ -43,28 +41,7 @@ a, .btn {
     font-weight: 100;
     padding-right: 20px;
     float: right;
-}
-.form-control {
-    background: transparent;
-    border: none;
-    color: #FFF;
-    font-size: 80px;
-    font-weight: 100;
-    margin-top: 80px;
-    float: right;
-    padding-top: 80px;
-    padding-bottom: 50px;
-    text-align: right;
-    padding-right: 20px;
-    outline: none;
-    box-shadow: 0px 0px 0px transparent;
-}
-.form-control:focus {
-    outline: none;
-    box-shadow: 0px 0px 0px transparent;
-}
-::-webkit-input-placeholder {
-   color: #FFF !important;
+    display: inline-block; 
 }
 .notification {
     height: 27px;
@@ -205,6 +182,14 @@ a, .btn {
     color: #555;
     padding: 10px 5px;
     padding-right: 10px;
+}
+.close {
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+.modal-close {
+    font-weight: 100;
 }
 .btn-social,
 .btn-social:focus {
