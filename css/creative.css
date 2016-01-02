@@ -32,6 +32,7 @@ a, .btn {
 .displayBox {
     background: #03A9F4;
     padding: 0;
+    min-height: 220px;
 }
 .displayText {
     margin-top: 110px;
