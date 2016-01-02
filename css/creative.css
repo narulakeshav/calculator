@@ -274,7 +274,7 @@ a, .btn {
 }
 @media only screen and (min-width: 1440px) {
     body {
-        padding-top: 10%;
+        padding-top: 6%;
     }
     .btn-calc,
     .clear,
