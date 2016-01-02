@@ -238,3 +238,28 @@ a, .btn {
     color: #40C3FF;
     border-color: #40C3FF;
 }
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+    .calculator {
+        height: 620px;
+    }
+    .displayBox {
+        height: 200px;
+    }
+    .btn-calc {
+        width: 70px;
+        height: 70px;
+    }
+    .btn-operation {
+        width: 97px;
+        height: 72.8px;
+    }
+    .clear {
+        width: 70px;
+        height: 70px;
+    }
+    .modal-dialog {
+        width: 90%;
+    }
+}
