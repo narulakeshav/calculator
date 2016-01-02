@@ -121,7 +121,7 @@ $(document).ready(function() {
         else if(num.toString().length > 18) { 
             num = "Infinity";
             $("#display").css("font-size", "80px");
-            $("#display").css("margin-top", "110px");
+            $("#display").css("margin-top", "130px");
             $("button").prop("disabled", true);
             $(".clear").attr("disabled", false);
         }
