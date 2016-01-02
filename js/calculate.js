@@ -79,9 +79,11 @@ $(document).ready(function() {
         displayBox.innerHTML += "-";
     });
     $("#multiply").click(function() {
+        evaluate();
         displayBox.innerHTML += "×";
     });
     $("#divide").click(function() {
+        evaluate();
         displayBox.innerHTML += "÷";
     });
     $("#square").click(function() {
@@ -104,7 +106,6 @@ $(document).ready(function() {
         displayBox.innerHTML = displayBox.innerHTML.replace("÷", "/");
         var evaluate = eval(displayBox.innerHTML);
         checkLength(evaluate);
-        evaluate = addCommas(evaluate.toString());
         displayBox.innerHTML = evaluate;
     }
 
