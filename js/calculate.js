@@ -116,12 +116,12 @@ $(document).ready(function() {
     function checkLength(num) {
         if(num.toString().length > 7 && num.toString().length < 14) { 
             $("#display").css("font-size", "40px");
-            $("#display").css("margin-top", "130px");
+            $("#display").css("margin-top", "150px");
         }
         else if(num.toString().length > 18) { 
             num = "Infinity";
             $("#display").css("font-size", "80px");
-            $("#display").css("margin-top", "130px");
+            $("#display").css("margin-top", "110px");
             $("button").prop("disabled", true);
             $(".clear").attr("disabled", false);
         }
