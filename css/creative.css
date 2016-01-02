@@ -247,17 +247,23 @@ a, .btn {
     .displayBox {
         height: 200px;
     }
+    .displayText {
+        margin-top: 80px;
+    }
     .btn-calc {
         width: 70px;
         height: 70px;
+        font-size: 18px;
     }
     .btn-operation {
         width: 97px;
         height: 72.8px;
+        font-size: 18px;
     }
     .clear {
         width: 70px;
         height: 70px;
+        font-size: 18px;
     }
     .modal-dialog {
         width: 100%;
