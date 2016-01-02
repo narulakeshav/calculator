@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name = "viewport" content="width=device-width">
+    <meta charset="UTF-8">
+    <!-- Favicon and Title -->
+    <title>CalculatorX</title>
+    <link rel="shortcut icon" href="favicon.png">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/creative.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
+    <!-- Google Font(s) Import -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet'>
+</head>
+<body>
+    <!-- HTML form and heading -->
+    <div class="container">
+        <div class="col-md-4 col-md-offset-4 calculator" align="center">
+            <a href="https://github.com/NarulaKeshav/calculator" target="_blank">
+                <div class="row notification">
+                    <p class="notificationMessage" id="notificationMessage">
+                       <span class="fa fa-code"></span>&nbsp;&nbsp;View Repository on GitHub
+                    </p>
+                </div>
+            </a>
+            <div class="row displayBox">
+                <p class="displayText" id="display">0</p>
+            </div>
+            <div class="row numberPad">
+                <div class="col-md-9">
+                    <div class="row">
+                        <button class="btn clear" id="clear">C</button>
+                        <button class="btn btn-calc" id="sqrt">√</button>
+                        <button class="btn btn-calc" id="square">x<sup>2</sup></button>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-calc" id="seven">7</button>
+                        <button class="btn btn-calc" id="eight">8</button>
+                        <button class="btn btn-calc" id="nine">9</button>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-calc" id="four">4</button>
+                        <button class="btn btn-calc" id="five">5</button>
+                        <button class="btn btn-calc" id="six">6</button>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-calc" id="one">1</button>
+                        <button class="btn btn-calc" id="two">2</button>
+                        <button class="btn btn-calc" id="three">3</button>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-calc" id="plus_minus">&#177;</button>
+                        <button class="btn btn-calc" id="zero">0</button>
+                        <button class="btn btn-calc" id="decimal">.</button>
+                    </div>
+                </div>
+                <div class="col-md-3 operationSide">
+                    <button id="divide" class="btn btn-operation">÷</button>
+                    <button id="multiply" class="btn btn-operation">×</button>
+                    <button id="subtract" class="btn btn-operation">−</button>
+                    <button id="add" class="btn btn-operation">+</button>
+                    <button id="equals" class="btn btn-operation equals">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/calculate.js"></script>
+</body>
+</html>

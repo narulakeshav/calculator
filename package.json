@@ -1,0 +1,13 @@
+{
+    "name": "Material Design Calculator",
+    "version": "1.0",
+    "description": "Calculate cool stuff!",
+    "main": "calculate.js",
+    "keywords": [
+        "Calculate",
+        "Operations",
+        "Equals"
+    ],
+    "author": "Keshav Narula",
+    "license": "MIT",
+}

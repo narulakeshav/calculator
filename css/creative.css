@@ -34,6 +34,16 @@ a:focus {
     background: #03A9F4;
     height: 220px;
 }
+.displayText {
+    margin-top: 110px;
+    background: transparent;
+    border: none;
+    color: #FFF;
+    font-size: 80px;
+    font-weight: 100;
+    padding-right: 20px;
+    float: right;
+}
 .form-control {
     background: transparent;
     border: none;
@@ -64,7 +74,7 @@ a:focus {
     transition: all .5s;
 }
 .notification:hover {
-    background: #028FCF;
+    background: #0487C2;
 }
 .notificationMessage {
     color: #A0DEFA;
@@ -128,17 +138,27 @@ a:focus {
     background: #E8E8E8;
     color: #444;
 }
-.equals {
+.equals,
+.equals:focus {
     background: #03A9F4;
     color: #FFF;
     height: 95px;
 }
 .equals:hover {
     background: #049ADE;
+    color: #FFF;
 }
-.clear {
+.clear,
+.clear:focus {
     background: #03A9F4;
     color: #FFF;
+    font-size: 25px;
+    width: 80px;
+    height: 80px;
+    font-weight: 100;
+    border-radius: 100px;
+    outline: none;
+    box-shadow: 0px 0px 0px transparent;
     border: none;
 }
 .clear:hover {
