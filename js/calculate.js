@@ -133,4 +133,5 @@ $(document).ready(function() {
             $(".clear").attr("disabled", false);
         }
     }
+
 });
