@@ -5,7 +5,7 @@ You can view the calculator and play around with it:
 [CalculatorX](https://narulakeshav.github.io/calculator)
 
 ______________________________________________________________________
-<br /><br />
+<br />
 ![Screenshot](http://goo.gl/6bc8XH)
 
 ## What I used: 
