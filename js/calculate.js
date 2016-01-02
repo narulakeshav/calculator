@@ -115,6 +115,17 @@ $(document).ready(function() {
         displayBox.innerHTML = displayBox.innerHTML.replace("×", "*");
         displayBox.innerHTML = displayBox.innerHTML.replace("÷", "/");
         var evaluate = eval(displayBox.innerHTML);
+        if(evaluate.toString().length > 7 && evaluate.toString().length < 14) { 
+            $("#display").css("font-size", "40px");
+            $("#display").css("margin-top", "130px");
+        }
+        else if(evaluate.toString().length > 18) { 
+            num = "Infinity";
+            $("#display").css("font-size", "80px");
+            $("#display").css("margin-top", "110px");
+            $("button").prop("disabled", true);
+            $(".clear").attr("disabled", false);
+        }
         displayBox.innerHTML = evaluate;
     }
 
