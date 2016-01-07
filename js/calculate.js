@@ -80,10 +80,12 @@ $(document).ready(function() {
     });
     $("#multiply").click(function() {
         evaluate();
+        trimIfNecessary();
         displayBox.innerHTML += "×";
     });
     $("#divide").click(function() {
         evaluate();
+        trimIfNecessary();
         displayBox.innerHTML += "÷";
     });
     $("#square").click(function() {
