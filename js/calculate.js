@@ -65,8 +65,10 @@ $(document).ready(function() {
         clickNumbers(0);
     });
     $("#decimal").click(function() {
+        var alreadyDecimal = false;
         checkLength(displayBox.innerHTML);
-        clickNumbers(".");
+        if(alreadyDecimal) clickNumbers(".");
+        alreadyDecimal = true;
     });
 
     //OPERATORS
