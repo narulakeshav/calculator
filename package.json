@@ -1,13 +1,24 @@
 {
     "name": "Material Design Calculator",
-    "version": "1.0",
-    "description": "Calculate cool stuff!",
-    "main": "calculate.js",
+    "version": "1.1.2",
+    "description": "Online Material Design calculator that does basic calculations, mix with elegant design.",
+    "author": "Keshav Narula <NarulaKeshav13@gmail.com>",
+    "contributors":[{
+        "name": "Keshav Narula",
+        "email": "NarulaKeshav13@gmail.com"
+    }],
+    "main": "js/calculate.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/NarulaKeshav/calculator"
+    },
+    "bugs": {
+        "url": "https://github.com/NarulaKeshav/calculator/issues"
+    }, 
     "keywords": [
-        "Calculate",
+        "Calculator",
         "Operations",
-        "Equals"
+        "Material Design"
     ],
-    "author": "Keshav Narula",
     "license": "MIT",
 }
