@@ -124,8 +124,8 @@ $(document).ready(function() {
     //CHECK FOR LENGTH & DISABLING BUTTONS
     function checkLength(num) {
         if(num.toString().length > 7 && num.toString().length < 14) { 
-            $("#display").css("font-size", "48px");
-            $("#display").css("margin-top", "180px");
+            $("#display").css("font-size", "35px");
+            $("#display").css("margin-top", "200px");
         }
         else if(num.toString().length > 16) { 
             num = "Infinity";
@@ -138,8 +138,8 @@ $(document).ready(function() {
     function trimIfNecessary() {
         var length = displayBox.innerHTML.length;
         if(length > 7 && length < 14) { 
-            $("#display").css("font-size", "48px");
-            $("#display").css("margin-top", "180px");
+            $("#display").css("font-size", "25px");
+            $("#display").css("margin-top", "200px");
         }
         else if(length > 14){
             displayBox.innerHTML = "Infinity";
