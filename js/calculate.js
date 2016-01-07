@@ -125,7 +125,7 @@ $(document).ready(function() {
     function checkLength(num) {
         if(num.toString().length > 7 && num.toString().length < 14) { 
             $("#display").css("font-size", "40px");
-            $("#display").css("margin-top", "130px");
+            $("#display").css("margin-top", "135px");
         }
         else if(num.toString().length > 16) { 
             num = "Infinity";
@@ -139,7 +139,7 @@ $(document).ready(function() {
         var length = displayBox.innerHTML.length;
         if(length > 7 && length < 14) { 
             $("#display").css("font-size", "40px");
-            $("#display").css("margin-top", "130px");
+            $("#display").css("margin-top", "135px");
         }
         else if(length > 14){
             displayBox.innerHTML = "Infinity";
