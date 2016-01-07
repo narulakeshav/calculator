@@ -68,7 +68,6 @@ $(document).ready(function() {
         clickNumbers(0);
     });
     $("#decimal").click(function() {
-        checkLength(displayBox.innerHTML);
         if(alreadyDecimal === false) {
             clickNumbers(".");
             alreadyDecimal = true;
