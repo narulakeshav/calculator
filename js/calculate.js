@@ -68,8 +68,8 @@ $(document).ready(function() {
         if(displayBox.innerHTML.indexOf(".") === -1 
             || (displayBox.innerHTML.indexOf(".") !== -1 && displayBox.innerHTML.indexOf("+") !== -1) 
             || (displayBox.innerHTML.indexOf(".") !== -1 && displayBox.innerHTML.indexOf("-") !== -1)
-            || (displayBox.innerHTML.indexOf(".") !== -1 && displayBox.innerHTML.indexOf("*") !== -1)
-            || (displayBox.innerHTML.indexOf(".") !== -1 && displayBox.innerHTML.indexOf("/") !== -1)) {
+            || (displayBox.innerHTML.indexOf(".") !== -1 && displayBox.innerHTML.indexOf("×") !== -1)
+            || (displayBox.innerHTML.indexOf(".") !== -1 && displayBox.innerHTML.indexOf("÷") !== -1)) {
             clickNumbers(".");
         }
     });
