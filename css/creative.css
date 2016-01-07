@@ -93,12 +93,11 @@ a, .btn {
     border-radius: 100px;
     outline: none;
     box-shadow: 0px 0px 0px transparent;
-    border: 2px solid transparent;
+    border: none;
 }
 .btn-calc:hover {
     background: #FFF;
     color: #03A9F4;
-    border: 1px solid #E0E0E0;
 }
 .btn-operation {
     background: transparent;
@@ -132,16 +131,16 @@ a, .btn {
 }
 .clear,
 .clear:focus {
-    background: #03A9F4;
+    background: #03A9F4 !important;
     color: #FFF;
     font-size: 25px;
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     font-weight: 100;
     border-radius: 100px;
     outline: none;
     box-shadow: 0px 0px 0px transparent;
-    border: none;
+    border: transparent;
 }
 .clear:hover {
     background: #049ADE;
@@ -292,4 +291,14 @@ a, .btn {
         width: 100%;
         height: 96px;
     }
+}
+
+.hvr-radial-out:before {
+    background: #FFF !important;
+    border-radius: 100%;
+    transition-duration: 0.5s;
+}
+.hvr-fade:before {
+    background: #FFF !important;
+    transition-duration: 0.5s;
 }

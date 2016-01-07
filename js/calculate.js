@@ -66,7 +66,7 @@ $(document).ready(function() {
     });
     $("#decimal").click(function() {
         checkLength(displayBox.innerHTML);
-        clickNumbers(".");
+        clickNumbers("0.");
     });
 
     //OPERATORS
