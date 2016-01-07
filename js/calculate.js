@@ -66,7 +66,7 @@ $(document).ready(function() {
     });
     $("#decimal").click(function() {
         checkLength(displayBox.innerHTML);
-        clickNumbers("0.");
+        clickNumbers(".");
     });
 
     //OPERATORS
@@ -144,4 +144,5 @@ $(document).ready(function() {
             $(".clear").attr("disabled", false);
         }
     }
+
 });
