@@ -122,10 +122,10 @@ $(document).ready(function() {
     //CHECK FOR LENGTH & DISABLING BUTTONS
     function checkLength(num) {
         if(num.toString().length > 7 && num.toString().length < 14) { 
-            $("#display").css("font-size", "40px");
-            $("#display").css("margin-top", "167px");
+            $("#display").css("font-size", "60px");
+            $("#display").css("margin-top", "147px");
         }
-        else if(num.toString().length > 18) { 
+        else if(num.toString().length > 16) { 
             num = "Infinity";
             $("#display").css("font-size", "80px");
             $("#display").css("margin-top", "110px");
