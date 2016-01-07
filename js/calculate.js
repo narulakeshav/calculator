@@ -25,82 +25,80 @@ $(document).ready(function() {
         $("button").prop("disabled", false);
     });
     $("#one").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(1);
     });
     $("#two").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(2);
     });
     $("#three").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(3);
     });
     $("#four").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(4);
     });
     $("#five").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(5);
     });
     $("#six").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(6);
     });
     $("#seven").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(7);
     });
     $("#eight").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(8);
     });
     $("#nine").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(9);
     });
     $("#zero").click(function() {
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         clickNumbers(0);
     });
     $("#decimal").click(function() {
-        trimIfNecessary();
-        clickNumbers(".");
+        if(displayBox.innerHTML.indexOf(".") === -1 
+            || (displayBox.innerHTML.indexOf(".") !== -1 && displayBox.innerHTML.indexOf("+") !== -1) 
+            || (displayBox.innerHTML.indexOf(".") !== -1 && displayBox.innerHTML.indexOf("-") !== -1)
+            || (displayBox.innerHTML.indexOf(".") !== -1 && displayBox.innerHTML.indexOf("×") !== -1)
+            || (displayBox.innerHTML.indexOf(".") !== -1 && displayBox.innerHTML.indexOf("÷") !== -1)) {
+            clickNumbers(".");
+        }
     });
 
     //OPERATORS
     $("#add").click(function() {
         evaluate();
+        checkLength(displayBox.innerHTML);
         displayBox.innerHTML += "+";
     });
     $("#subtract").click(function() {
         evaluate();
+        checkLength(displayBox.innerHTML);
         displayBox.innerHTML += "-";
     });
     $("#multiply").click(function() {
         evaluate();
+        checkLength(displayBox.innerHTML);
         displayBox.innerHTML += "×";
     });
     $("#divide").click(function() {
         evaluate();
+        checkLength(displayBox.innerHTML);
         displayBox.innerHTML += "÷";
     });
     $("#square").click(function() {
         var num = Number(displayBox.innerHTML);
         num = num * num;
-        num = num.toString();
-        if(num.length > 7 && num.length < 14) { 
-            $("#display").css("font-size", "40px");
-            $("#display").css("margin-top", "130px");
-        }
-        else if(num.length > 18) { 
-            num = "Infinity";
-            $("#display").css("font-size", "80px");
-            $("#display").css("margin-top", "110px");
-            $("button").prop("disabled", true);
-            $(".clear").attr("disabled", false);
-        }
+        checkLength(num);
         displayBox.innerHTML = num;
     });
     $("#sqrt").click(function() {
@@ -112,23 +110,46 @@ $(document).ready(function() {
 
     //EVAL FUNCTION
     function evaluate() {
+        displayBox.innerHTML = displayBox.innerHTML.replace(",", "");
         displayBox.innerHTML = displayBox.innerHTML.replace("×", "*");
         displayBox.innerHTML = displayBox.innerHTML.replace("÷", "/");
+        if(displayBox.innerHTML.indexOf("/0") !== -1) {
+            $("#display").css("font-size", "70px");
+            $("#display").css("margin-top", "124px");
+            $("button").prop("disabled", false);
+            $(".clear").attr("disabled", false);
+            displayBox.innerHTML = "Undefined";
+        }
         var evaluate = eval(displayBox.innerHTML);
+        if(evaluate.toString().indexOf(".") !== -1) {
+            evaluate = evaluate.toFixed(5);
+        }
+        checkLength(evaluate);
         displayBox.innerHTML = evaluate;
+    }
+
+    //CHECK FOR LENGTH & DISABLING BUTTONS
+    function checkLength(num) {
+        if(num.toString().length > 7 && num.toString().length < 14) { 
+            $("#display").css("font-size", "35px");
+            $("#display").css("margin-top", "174px");
+        }
+        else if(num.toString().length > 16) { 
+            num = "Infinity";
+            $("button").prop("disabled", true);
+            $(".clear").attr("disabled", false);
+        }
     }
 
     //TRIM IF NECESSARY
     function trimIfNecessary() {
         var length = displayBox.innerHTML.length;
         if(length > 7 && length < 14) { 
-            $("#display").css("font-size", "40px");
-            $("#display").css("margin-top", "130px");
+            $("#display").css("font-size", "35px");
+            $("#display").css("margin-top", "174px");
         }
         else if(length > 14){
             displayBox.innerHTML = "Infinity";
-            $("#display").css("font-size", "80px");
-            $("#display").css("margin-top", "110px");
             $("button").prop("disabled", true);
             $(".clear").attr("disabled", false);
         }

@@ -5,7 +5,7 @@
 body {
     /*background: -webkit-linear-gradient(-60deg, #CCC 0%,#CCC 50%,#BBB 50%,#BBB 100%);*/
     background:  radial-gradient(circle, #FFF, #888);
-    padding-top: 2em;
+    padding-top: 2%;
     height: 100vh;
     font-family: Roboto;
 }
@@ -28,11 +28,12 @@ a, .btn {
 .calculator {
     background: #F0F0F0;
     box-shadow: 2px 3px 6px #C2C2C2;
-    height: 672px;
 }
 .displayBox {
     background: #03A9F4;
-    height: 220px;
+    padding: 0;
+    min-height: 220px;
+    overflow: hidden;
 }
 .displayText {
     margin-top: 110px;
@@ -42,29 +43,10 @@ a, .btn {
     font-size: 80px;
     font-weight: 100;
     padding-right: 20px;
+    padding-bottom: -10px;
     float: right;
-}
-.form-control {
-    background: transparent;
-    border: none;
-    color: #FFF;
-    font-size: 80px;
-    font-weight: 100;
-    margin-top: 80px;
-    float: right;
-    padding-top: 80px;
-    padding-bottom: 50px;
-    text-align: right;
-    padding-right: 20px;
-    outline: none;
-    box-shadow: 0px 0px 0px transparent;
-}
-.form-control:focus {
-    outline: none;
-    box-shadow: 0px 0px 0px transparent;
-}
-::-webkit-input-placeholder {
-   color: #FFF !important;
+    display: inline-block;
+    overflow: hidden; 
 }
 .notification {
     height: 27px;
@@ -92,8 +74,8 @@ a, .btn {
 .operationSide {
     background: #FFF;
     margin-top: -14px;
-    padding-left: -20px;
     padding: 0;
+    padding-left: -20px;
     padding-top: 10px;
     border-left: 1px solid #E5E5E5;
 }
@@ -105,24 +87,24 @@ a, .btn {
     background: transparent;
     color: #A2A2A2;
     font-size: 25px;
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     font-weight: 100;
     border-radius: 100px;
     outline: none;
     box-shadow: 0px 0px 0px transparent;
-    border: 2px solid transparent;
+    border: none;
 }
 .btn-calc:hover {
     background: #FFF;
     color: #03A9F4;
-    border: 1px solid #E0E0E0;
 }
 .btn-operation {
     background: transparent;
     color: #999;
     font-size: 25px;
-    width: 97px;
+    /*width: 97px;*/
+    width: 100%;
     height: 80.8px;
     font-weight: 100;
     border-radius: 0;
@@ -142,7 +124,6 @@ a, .btn {
 .equals:focus {
     background: #03A9F4;
     color: #FFF;
-    height: 95px;
 }
 .equals:hover {
     background: #049ADE;
@@ -150,16 +131,16 @@ a, .btn {
 }
 .clear,
 .clear:focus {
-    background: #03A9F4;
+    background: #03A9F4 !important;
     color: #FFF;
     font-size: 25px;
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     font-weight: 100;
     border-radius: 100px;
     outline: none;
     box-shadow: 0px 0px 0px transparent;
-    border: none;
+    border: transparent;
 }
 .clear:hover {
     background: #049ADE;
@@ -206,6 +187,14 @@ a, .btn {
     padding: 10px 5px;
     padding-right: 10px;
 }
+.close {
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+.modal-close {
+    font-weight: 100;
+}
 .btn-social,
 .btn-social:focus {
     background: #F0F0F0;
@@ -237,4 +226,79 @@ a, .btn {
 .link:hover {
     color: #40C3FF;
     border-color: #40C3FF;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+    body {
+       padding-top: 1.3em; 
+    }
+    .calculator {
+        height: 590px;
+        box-shadow: 2px 3px 6px #888;
+    }
+    .displayBox {
+        height: 150px;
+    }
+    .displayText {
+        margin-top: 80px;
+        font-size: 50px;
+    }
+    .btn-calc,
+    .btn-calc:focus {
+        width: 70px;
+        height: 70px;
+        font-size: 18px;
+    }
+    .operationSide {
+        padding: 0;
+    }
+    .btn-operation,
+    .btn-operation:focus {
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+    }
+    .clear,
+    .clear:focus {
+        width: 70px;
+        height: 70px;
+        font-size: 18px;
+    }
+    .equals,
+    .equals:focus {
+        width: 62px;
+        height: 63px;
+        margin-top: 1px;
+    }
+    .modal-dialog {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    .container {
+        width: 85%;
+    }
+    .btn-calc,
+    .clear,
+    .btn-calc:focus,
+    .clear:focus {
+        width: 80px;
+        height: 80px;
+    }
+    .equals,
+    .equals:focus {
+        width: 100%;
+        height: 96px;
+    }
+}
+
+.hvr-radial-out:before {
+    background: #FFF !important;
+    border-radius: 100%;
+    transition-duration: 0.5s;
+}
+.hvr-fade:before {
+    background: #FFF !important;
+    transition-duration: 0.5s;
 }
