@@ -129,8 +129,6 @@ $(document).ready(function() {
         }
         else if(num.toString().length > 16) { 
             num = "Infinity";
-            $("#display").css("font-size", "80px");
-            $("#display").css("margin-top", "110px");
             $("button").prop("disabled", true);
             $(".clear").attr("disabled", false);
         }
@@ -145,8 +143,6 @@ $(document).ready(function() {
         }
         else if(length > 14){
             displayBox.innerHTML = "Infinity";
-            $("#display").css("font-size", "80px");
-            $("#display").css("margin-top", "110px");
             $("button").prop("disabled", true);
             $(".clear").attr("disabled", false);
         }
