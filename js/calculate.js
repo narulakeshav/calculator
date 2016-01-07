@@ -113,11 +113,18 @@ $(document).ready(function() {
         displayBox.innerHTML = displayBox.innerHTML.replace(",", "");
         displayBox.innerHTML = displayBox.innerHTML.replace("×", "*");
         displayBox.innerHTML = displayBox.innerHTML.replace("÷", "/");
+        if(displayBox.innerHTML.indexOf("/0") !== -1) {
+            $("#display").css("font-size", "70px");
+            $("#display").css("margin-top", "124px");
+            $("button").prop("disabled", false);
+            $(".clear").attr("disabled", false);
+            displayBox.innerHTML = "Undefined";
+        }
         var evaluate = eval(displayBox.innerHTML);
-        checkLength(evaluate);
         if(evaluate.toString().indexOf(".") !== -1) {
             evaluate = evaluate.toFixed(5);
         }
+        checkLength(evaluate);
         displayBox.innerHTML = evaluate;
     }
 
@@ -125,7 +132,7 @@ $(document).ready(function() {
     function checkLength(num) {
         if(num.toString().length > 7 && num.toString().length < 14) { 
             $("#display").css("font-size", "35px");
-            $("#display").css("margin-top", "170px");
+            $("#display").css("margin-top", "174px");
         }
         else if(num.toString().length > 16) { 
             num = "Infinity";
@@ -139,7 +146,7 @@ $(document).ready(function() {
         var length = displayBox.innerHTML.length;
         if(length > 7 && length < 14) { 
             $("#display").css("font-size", "35px");
-            $("#display").css("margin-top", "170px");
+            $("#display").css("margin-top", "174px");
         }
         else if(length > 14){
             displayBox.innerHTML = "Infinity";
