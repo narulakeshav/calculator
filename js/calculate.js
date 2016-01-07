@@ -77,20 +77,22 @@ $(document).ready(function() {
     //OPERATORS
     $("#add").click(function() {
         evaluate();
+        checkLength(displayBox.innerHTML);
         displayBox.innerHTML += "+";
     });
     $("#subtract").click(function() {
         evaluate();
+        checkLength(displayBox.innerHTML);
         displayBox.innerHTML += "-";
     });
     $("#multiply").click(function() {
         evaluate();
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         displayBox.innerHTML += "×";
     });
     $("#divide").click(function() {
         evaluate();
-        trimIfNecessary();
+        checkLength(displayBox.innerHTML);
         displayBox.innerHTML += "÷";
     });
     $("#square").click(function() {
