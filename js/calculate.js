@@ -138,7 +138,7 @@ $(document).ready(function() {
     function trimIfNecessary() {
         var length = displayBox.innerHTML.length;
         if(length > 7 && length < 14) { 
-            $("#display").css("font-size", "25px");
+            $("#display").css("font-size", "35px");
             $("#display").css("margin-top", "180px");
         }
         else if(length > 14){
