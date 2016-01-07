@@ -7,6 +7,9 @@ $(document).ready(function() {
         else { displayBox.innerHTML += val; }
     }
 
+    // DECIMAL ALREADY
+    var alreadyDecimal = false;
+
     //PLUS MINUS
     $("#plus_minus").click(function() {
         if(eval(displayBox.innerHTML) > 0) {
@@ -65,10 +68,11 @@ $(document).ready(function() {
         clickNumbers(0);
     });
     $("#decimal").click(function() {
-        var alreadyDecimal = false;
         checkLength(displayBox.innerHTML);
-        if(alreadyDecimal) clickNumbers(".");
-        alreadyDecimal = true;
+        if(alreadyDecimal === false) {
+            clickNumbers(".");
+            alreadyDecimal = true;
+        }
     });
 
     //OPERATORS
